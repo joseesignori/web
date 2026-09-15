@@ -3,154 +3,508 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jose Signori</title>
+  <meta name="color-scheme" content="dark" />
+  <title>Jose Signori — Estudiante de Ingeniería de Sistemas</title>
+  <meta name="description" content="Portafolio de Jose Signori, estudiante peruano de Ingeniería de Sistemas enfocado en desarrollo de software y backend." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="imagenes/icono-creeper.png">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.simpleicons.org">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <a class="skip-link" href="#inicio">Ir al contenido</a>
+
   <header>
-    <nav class="container nav">
-      <div class="logo">/_/_/</div>
-      <ul class="nav-links">
-        <li><a href="#inicio">01 | Home</a></li>
-        <li><a href="#proyectos">02 | Projects</a></li>
-        <li><a href="#sobre-mi">03 | About me</a></li>
+    <nav class="container nav" aria-label="Principal">
+      <a href="#inicio" class="logo" aria-label="Jose Signori — inicio">/_/_/</a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menú</span>
+      </button>
+
+      <ul class="nav-links" id="navMenu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#habilidades">Tecnologías</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="inicio" class="hero container fade-in">
-      <h1>Hi, I'm <span class="highlight">Jose Signori</span></h1>
-      <p> (aka treus) 19 & trying my best.</p>
-    </section>
+    <section id="inicio" class="hero">
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-veil" aria-hidden="true"></div>
 
-    <section id="proyectos" class="section container fade-in">
-      <h2>Cool stuff I've made</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Discord bot</h3>
-          <p>Easy discord voice and response bot</p>
-        </div>
-        <div class="card">
-          <h3>Interactive Portfolio</h3>
-          <p>Responsive design with smooth animations and modular sections.</p>
-        </div>
-        <div class="card">
-          <h3>Toyota website</h3>
-          <p>A website with modern interface.</p>
-        </div>
-      </div>
-    </section>
-    
-
-<section id="habilidades" class="section container fade-in">
-    <h2>I'm good at these...</h2>
-    <div class="habilidades-grid">
-      <div class="habilidad">
-        <img src="imagenes/html5.png" alt="HTML5" class="habilidad-icon" />
-        <span>HTML5</span>
-      </div>
-      <div class="habilidad">
-        <img src="imagenes/css3.png" alt="CSS3" class="habilidad-icon" />
-        <span>CSS3</span>
-      </div>
-      <div class="habilidad">
-        <img src="imagenes/javascript.png" alt="JavaScript" class="habilidad-icon" />
-        <span>JavaScript</span>
-      </div>
-      <div class="habilidad">
-        <img src="imagenes/java.png" alt="Java" class="habilidad-icon" />
-        <span>Java</span>
-      </div>
-      <div class="habilidad">
-        <img src="imagenes/python.png" alt="Python" class="habilidad-icon" />
-        <span>Python</span>
-      </div>
-      <div class="habilidad">
-        <img src="imagenes/lua.png" alt="Lua" class="habilidad-icon" />
-        <span>Lua</span>
-      </div>
-      <div class="habilidad">
-        <img src="imagenes/nodejs.png" alt="Node.js" class="habilidad-icon" />
-        <span>Node.js</span>
-      </div>
-      <div class="habilidad">
-        <img src="imagenes/mysql.png" alt="MySQL" class="habilidad-icon" />
-        <span>MySQL</span>
-      </div>
-      <div class="habilidad">
-        <img src="imagenes/mssql.png" alt="Microsoft SQL" class="habilidad-icon" />
-        <span>Microsoft SQL</span>
-      </div>
-      <div class="habilidad">
-        <img src="imagenes/c++.png" alt="C#" class="habilidad-icon" />
-        <span>C++</span>
-      </div>
-      <div class="habilidad">
-        <img src="imagenes/csharp.png" alt="C#" class="habilidad-icon" />
-        <span>C#</span>
-      </div>
-      <div class="habilidad">
-        <img src="imagenes/php.png" alt="C#" class="habilidad-icon" />
-        <span>php</span>
-      </div>
-    </div>
-  </section>
-  
- 
-
-<section id="sobre-mi" class="section container fade-in">
-    <h2>About me</h2>
-    <p>
-        I am currently studying at <strong>Universidad Tecnológica del Perú</strong>, where I strive to give my best in all the programming languages I'm learning, such as HTML5, CSS3, JavaScript, Python, and more. I am committed to continuing my learning and growing in various areas of programming, digital design, and technology.
+      <div class="container hero-inner">
+        <h1>Hola, soy <span class="highlight">Jose Signori</span></h1>
+        <p class="hero-lead">
+          Estudiante de Ingeniería de Sistemas, construyo software y actualmente
+          me enfoco en desarrollo backend.
         </p>
-    <div class="social">
-<a href="https://github.com/joseesignori" target="_blank" class="github-link" aria-label="GitHub">
-  <img src="imagenes/github.png" alt="GitHub" class="github-icon" />
-  <span>github.com/joseesignori</span>
-</a>
-    </div>
+        <p class="hero-meta">aka treus </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#proyectos">Ver mis proyectos</a>
+          <a class="btn btn-ghost" href="mailto:josesignori15@gmail.com">Contáctame</a>
+        </div>
+        <dl class="hero-facts">
+          <div><dt>Enfoque actual</dt><dd>Desarrollo backend</dd></div>
+          <div><dt>Idiomas</dt><dd>Español · Inglés · Portugués</dd></div>
+          <div><dt>Ubicación</dt><dd>Perú</dd></div>
+        </dl>
+      </div>
+    </section>
+
+   
+    <section id="proyectos" class="section section-projects">
+      <div class="container">
+        <div class="section-bar reveal">
+          <div class="section-title">
+            <span class="section-index">01</span>
+            <h2>Proyectos</h2>
+          </div>
+          <p class="section-note">Cosas que he construido mientras aprendo. Desliza para verlas todas</p>
+        </div>
+      </div>
+
+      <div class="rail-wrap">
+        <div class="rail" id="projectRail">
+
+          <article class="card card-featured reveal">
+            <div class="card-media" aria-hidden="true">
+              <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+                <rect class="sv-panel" x="14" y="22" width="168" height="136" rx="6"/>
+                <rect class="sv-line" x="30" y="42" width="78" height="7" rx="3.5"/>
+                <rect class="sv-line" x="30" y="60" width="136" height="5" rx="2.5"/>
+                <rect class="sv-line" x="30" y="72" width="112" height="5" rx="2.5"/>
+                <rect class="sv-track" x="30" y="96" width="136" height="4" rx="2"/>
+                <circle class="sv-accent-fill" cx="112" cy="98" r="7"/>
+                <rect class="sv-track" x="30" y="122" width="136" height="4" rx="2"/>
+                <circle class="sv-accent-fill" cx="66" cy="124" r="7"/>
+                <path class="sv-stroke" d="M214 52 L228 150 a10 10 0 0 0 10 9 h24 a10 10 0 0 0 10-9 L286 52 Z"/>
+                <rect class="sv-accent2-stroke" x="210" y="40" width="80" height="12" rx="4"/>
+                <path class="sv-accent2-stroke" d="M250 40 V22"/>
+                <circle class="sv-dot" cx="238" cy="120" r="5"/>
+                <circle class="sv-dot" cx="255" cy="134" r="5"/>
+                <circle class="sv-dot" cx="268" cy="118" r="5"/>
+                <circle class="sv-dot" cx="249" cy="107" r="5"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <p class="card-client">Bobba Lab × BODUO — Edición 2026</p>
+              <h3>¿Cuánto te cuesta cada vaso?</h3>
+              <p>
+                Elige una bebida del Recetario Bobba Lab × BODUO (Edición 2026), ajusta
+                cantidades y empaque, y mira al instante tu costo real, tu margen y cuántos
+                vasos rinde cada insumo. El vaso de la derecha se arma con la receta que
+                tienes seleccionada.
+              </p>
+              <p class="card-feature">La bebida se dibuja en tiempo real mientras configuras la receta.</p>
+              <ul class="tech-list">
+                <li>JavaScript</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+              </ul>
+              <a class="card-link" href="#" target="_blank" rel="noopener">Abrir la calculadora</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-media" aria-hidden="true">
+              <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+                <rect class="sv-panel" x="40" y="34" width="240" height="112" rx="10"/>
+                <circle class="sv-stroke" cx="132" cy="84" r="20"/>
+                <circle class="sv-accent-fill" cx="124" cy="80" r="3.5"/>
+                <circle class="sv-accent-fill" cx="141" cy="80" r="3.5"/>
+                <path class="sv-stroke" d="M124 93 h17"/>
+                <path class="sv-stroke" d="M132 64 V54"/>
+                <rect class="sv-line" x="178" y="66" width="6" height="14" rx="3"/>
+                <rect class="sv-line" x="192" y="58" width="6" height="30" rx="3"/>
+                <rect class="sv-accent2-fill" x="206" y="48" width="6" height="50" rx="3"/>
+                <rect class="sv-line" x="220" y="60" width="6" height="26" rx="3"/>
+                <rect class="sv-line" x="234" y="68" width="6" height="10" rx="3"/>
+                <rect class="sv-line" x="178" y="112" width="62" height="5" rx="2.5"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>Bot de Discord</h3>
+              <p>Bot de voz y texto para servidores de Discord, con comandos simples y respuestas rápidas.</p>
+              <ul class="tech-list">
+                <li>Node.js</li>
+                <li>JavaScript</li>
+                <li>APIs REST</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-media" aria-hidden="true">
+              <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+                <rect class="sv-panel" x="34" y="26" width="252" height="128" rx="8"/>
+                <path class="sv-line-stroke" d="M34 50 h252"/>
+                <circle class="sv-dot" cx="50" cy="38" r="3.5"/>
+                <circle class="sv-dot" cx="62" cy="38" r="3.5"/>
+                <circle class="sv-dot" cx="74" cy="38" r="3.5"/>
+                <rect class="sv-accent-fill" x="52" y="68" width="92" height="8" rx="4"/>
+                <rect class="sv-line" x="52" y="86" width="132" height="5" rx="2.5"/>
+                <rect class="sv-line" x="52" y="98" width="104" height="5" rx="2.5"/>
+                <rect class="sv-block" x="52" y="116" width="66" height="24" rx="4"/>
+                <rect class="sv-block" x="126" y="116" width="66" height="24" rx="4"/>
+                <rect class="sv-block" x="200" y="116" width="66" height="24" rx="4"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>Portafolio interactivo</h3>
+              <p>Este sitio: diseño responsive, secciones modulares y animaciones discretas.</p>
+              <ul class="tech-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-media" aria-hidden="true">
+              <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+                <rect class="sv-panel" x="34" y="26" width="252" height="128" rx="8"/>
+                <path class="sv-line-stroke" d="M34 52 h252"/>
+                <rect class="sv-line" x="50" y="36" width="40" height="6" rx="3"/>
+                <rect class="sv-line" x="196" y="36" width="24" height="6" rx="3"/>
+                <rect class="sv-line" x="228" y="36" width="24" height="6" rx="3"/>
+                <path class="sv-stroke" d="M74 118 l16-26 a12 12 0 0 1 10-6 h60 a12 12 0 0 1 10 6 l16 26 Z"/>
+                <path class="sv-accent2-stroke" d="M64 118 h192"/>
+                <circle class="sv-stroke" cx="106" cy="124" r="9"/>
+                <circle class="sv-stroke" cx="212" cy="124" r="9"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3>Sitio web de Toyota</h3>
+              <p>Sitio conceptual para una marca de autos, enfocado en una interfaz limpia y navegación clara.</p>
+              <ul class="tech-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Bootstrap</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
     
-    <div class="social">
-        <a href="" target="_blank" class="gmail-link" aria-label="Gmail">
-          <img src="imagenes/gmail.png" alt="Gmail" class="gmail-icon" />
-          <span>josesignori15@gmail.com</span>
-        </a>
-    </div>
-    <div class="social">
-        <a href="https://open.spotify.com/user/6i2qsyqzip0rzr492q3tz44t0" target="_blank" class="spotify-link" aria-label="Spotify">
-          <img src="imagenes/spotify.png" alt="Spotify" class="spotify-icon" />
-          <span>Jose Signori</span>
-        </a>
-    </div>
-      
-  </section>  
-  
-  </section>
-  
-  
-  
+    <section id="habilidades" class="section section-skills">
+      <div class="container">
+        <div class="section-bar reveal">
+          <div class="section-title">
+            <span class="section-index">02</span>
+            <h2>Tecnologías</h2>
+          </div>
+          <p class="section-note">Lo que uso, agrupado por área.</p>
+        </div>
+
+        <div class="skills-row">
+
+          <div class="skill-col is-focus reveal">
+            <h3>Backend</h3>
+            <span class="focus-tag">enfoque actual</span>
+            <ul class="tags">
+              <li><img src="https://cdn.simpleicons.org/nodedotjs" alt="" loading="lazy" width="18" height="18"><span>Node.js</span></li>
+              <li><img src="https://cdn.simpleicons.org/express/e6e9ef" alt="" loading="lazy" width="18" height="18"><span>Express.js</span></li>
+              <li><img src="https://cdn.simpleicons.org/php" alt="" loading="lazy" width="18" height="18"><span>PHP</span></li>
+<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="" loading="lazy" width="18" height="18"><span>Java</span></li>
+              <li><img src="https://cdn.simpleicons.org/springboot" alt="" loading="lazy" width="18" height="18"><span>Spring Boot</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-col reveal">
+            <h3>Frontend</h3>
+            <ul class="tags">
+              <li><img src="https://cdn.simpleicons.org/html5" alt="" loading="lazy" width="18" height="18"><span>HTML5</span></li>
+              <li><img src="https://cdn.simpleicons.org/css" alt="" loading="lazy" width="18" height="18"><span>CSS3</span></li>
+              <li><img src="https://cdn.simpleicons.org/javascript" alt="" loading="lazy" width="18" height="18"><span>JavaScript</span></li>
+              <li><img src="https://cdn.simpleicons.org/bootstrap" alt="" loading="lazy" width="18" height="18"><span>Bootstrap</span></li>
+              <li><img src="https://cdn.simpleicons.org/react" alt="" loading="lazy" width="18" height="18"><span>React.js</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-col reveal">
+            <h3>Bases de datos</h3>
+            <ul class="tags">
+              <li><img src="https://cdn.simpleicons.org/mysql" alt="" loading="lazy" width="18" height="18"><span>MySQL</span></li>
+<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="" loading="lazy" width="18" height="18"><span>Microsoft SQL Server</span></li>
+              <li><img src="https://cdn.simpleicons.org/mongodb" alt="" loading="lazy" width="18" height="18"><span>MongoDB</span></li>
+            </ul>
+          </div>
+
+          <div class="skill-col reveal">
+            <h3>Herramientas</h3>
+            <ul class="tags">
+              <li><img src="https://cdn.simpleicons.org/git" alt="" loading="lazy" width="18" height="18"><span>Git</span></li>
+              <li><img src="https://cdn.simpleicons.org/github/e6e9ef" alt="" loading="lazy" width="18" height="18"><span>GitHub</span></li>
+              <li><img src="https://cdn.simpleicons.org/postman" alt="" loading="lazy" width="18" height="18"><span>Postman</span></li>
+              <li class="tag-plain"><span>APIs REST</span></li>
+              <li><img src="https://cdn.simpleicons.org/json/e6e9ef" alt="" loading="lazy" width="18" height="18"><span>JSON</span></li>
+              <li><img src="https://cdn.simpleicons.org/jsonwebtokens/e6e9ef" alt="" loading="lazy" width="18" height="18"><span>JWT</span></li>
+              <li class="tag-plain"><span>Diseño responsive</span></li>
+              <li><img src="https://cdn.simpleicons.org/wordpress" alt="" loading="lazy" width="18" height="18"><span>WordPress</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="sobre-mi" class="section section-about">
+      <div class="container">
+        <div class="section-bar reveal">
+          <div class="section-title">
+            <span class="section-index">03</span>
+            <h2>Sobre mí</h2>
+          </div>
+          <p class="section-note">Un poco de contexto.</p>
+        </div>
+
+        <div class="about-lead reveal">
+          <p>
+            Soy un estudiante peruano de Ingeniería de Sistemas con un fuerte interés en el
+            desarrollo de software y la tecnología. Disfruto aprender cosas nuevas y convertir
+            ideas en soluciones prácticas.
+          </p>
+        </div>
+
+        <div class="about-row">
+          <div class="about-block reveal">
+            <span class="block-label">Idiomas</span>
+            <p>
+              Hablo español, inglés y portugués con fluidez, lo que me ha permitido conectar y
+              comunicarme con personas de distintos orígenes.
+            </p>
+          </div>
+          <div class="about-block reveal">
+            <span class="block-label">Últimamente</span>
+            <p>
+              En los últimos meses me he enfocado principalmente en el desarrollo backend, mientras
+              sigo ampliando mis conocimientos en distintas áreas de la ingeniería de software.
+            </p>
+          </div>
+          <div class="about-block reveal">
+            <span class="block-label">Fuera del código</span>
+            <p>
+              Los videojuegos, la música y el fútbol son algunos de mis pasatiempos favoritos.
+              Son una gran parte de cómo paso mi tiempo libre y me desconecto.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-row reveal">
+          <span class="block-label">Dónde encontrarme</span>
+          <ul class="contact">
+            <li>
+              <a href="https://github.com/joseesignori" target="_blank" rel="noopener">
+                <img src="https://cdn.simpleicons.org/github/e6e9ef" alt="" class="contact-icon" width="20" height="20" loading="lazy" />
+                <span>github.com/joseesignori</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:josesignori15@gmail.com">
+                <img src="https://cdn.simpleicons.org/gmail" alt="" class="contact-icon" width="20" height="20" loading="lazy" />
+                <span>josesignori15@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://open.spotify.com/user/6i2qsyqzip0rzr492q3tz44t0" target="_blank" rel="noopener">
+                <img src="https://cdn.simpleicons.org/spotify" alt="" class="contact-icon" width="20" height="20" loading="lazy" />
+                <span>Jose Signori</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Jose Signori — crafted with love</p>
+    <div class="container footer-inner">
+      <p>&copy; 2026 Jose Signori</p>
+      <a href="#inicio" class="to-top">Volver arriba</a>
     </div>
   </footer>
 
   <script>
-    const elements = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver((entries) => {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    navToggle.addEventListener('click', () => {
+      const open = navMenu.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+   
+    const navItems = new Map();
+    navMenu.querySelectorAll('a').forEach(a => navItems.set(a.getAttribute('href').slice(1), a));
+
+    const sectionObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
+        const link = navItems.get(entry.target.id);
+        if (link && entry.isIntersecting) {
+          navItems.forEach(a => a.classList.remove('is-active'));
+          link.classList.add('is-active');
         }
       });
-    }, { threshold: 0.1 });
+    }, { rootMargin: '-45% 0px -50% 0px' });
 
-    elements.forEach(el => observer.observe(el));
+    document.querySelectorAll('main section[id]').forEach(s => sectionObserver.observe(s));
+
+   
+    const revealables = document.querySelectorAll('.reveal, .hero-inner');
+
+    if (reduceMotion) {
+      revealables.forEach(el => el.classList.add('show'));
+    } else {
+      const revealObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealables.forEach(el => revealObserver.observe(el));
+    }
+
+
+    (function heroBackground() {
+      const canvas = document.getElementById('heroCanvas');
+      if (!canvas || reduceMotion) return;
+
+      const ctx = canvas.getContext('2d');
+      const hero = document.getElementById('inicio');
+
+      const snippets = [
+        'const build = () => ship();',
+        'if (err) throw new Error(err);',
+        'app.get("/api/users", handler)',
+        'SELECT * FROM proyectos;',
+        'return res.status(200).json(data)',
+        'npm run dev',
+        'git commit -m "wip"',
+        'public class Main { }',
+        'await db.connect();',
+        'function solve(problem) {',
+        '} catch (e) { log(e) }',
+        'export default Portfolio;',
+        'docker compose up -d',
+        'const [state, setState] = useState()',
+        '@RestController',
+        'for (let i = 0; i < n; i++)'
+      ];
+
+      let lines = [];
+      let w = 0, h = 0, dpr = 1;
+      let pointer = { x: 0, y: 0 };
+      let target = { x: 0, y: 0 };
+      let running = true;
+      let frame;
+
+      function build() {
+        const rect = hero.getBoundingClientRect();
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        w = rect.width;
+        h = rect.height;
+        canvas.width = w * dpr;
+        canvas.height = h * dpr;
+        canvas.style.width = w + 'px';
+        canvas.style.height = h + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        const count = w < 700 ? 14 : 26;
+        lines = Array.from({ length: count }, () => spawn(true));
+      }
+
+      function spawn(initial) {
+        const depth = 0.4 + Math.random() * 0.9;
+        return {
+          text: snippets[Math.floor(Math.random() * snippets.length)],
+          x: Math.random() * w,
+          y: initial ? Math.random() * h : h + 30,
+          size: 11 + depth * 4,
+          speed: 0.10 + depth * 0.14,
+          depth,
+          alpha: 0.05 + depth * 0.09,
+          accent: Math.random() < 0.18
+        };
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+
+        pointer.x += (target.x - pointer.x) * 0.06;
+        pointer.y += (target.y - pointer.y) * 0.06;
+
+        lines.forEach((l, i) => {
+          l.y -= l.speed;
+          if (l.y < -30) lines[i] = spawn(false);
+
+          const ox = pointer.x * 14 * l.depth;
+          const oy = pointer.y * 10 * l.depth;
+
+          ctx.font = l.size + 'px "JetBrains Mono", ui-monospace, monospace';
+          ctx.fillStyle = l.accent
+            ? 'rgba(124, 138, 255, ' + (l.alpha + 0.05).toFixed(3) + ')'
+            : 'rgba(198, 210, 232, ' + l.alpha.toFixed(3) + ')';
+          ctx.fillText(l.text, l.x + ox, l.y + oy);
+        });
+
+        frame = requestAnimationFrame(draw);
+      }
+
+      hero.addEventListener('pointermove', (e) => {
+        const rect = hero.getBoundingClientRect();
+        target.x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+        target.y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+      });
+
+      hero.addEventListener('pointerleave', () => { target.x = 0; target.y = 0; });
+
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(build, 200);
+      });
+
+    
+      new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !running) {
+            running = true;
+            frame = requestAnimationFrame(draw);
+          } else if (!entry.isIntersecting && running) {
+            running = false;
+            cancelAnimationFrame(frame);
+          }
+        });
+      }).observe(hero);
+
+      build();
+      draw();
+    })();
   </script>
 </body>
 </html>
